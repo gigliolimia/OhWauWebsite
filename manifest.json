@@ -1,0 +1,8 @@
+{
+  "name": "Oh Wau, Patitas!",
+  "short_name": "Oh Wau",
+  "start_url": "./app.html",
+  "display": "standalone",
+  "background_color": "#F7F3EE",
+  "theme_color": "#090503"
+}

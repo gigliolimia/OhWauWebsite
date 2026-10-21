@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Office · Oh Wau, Patitas!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-page="office">
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png?v=paw2" alt="" />
+        <span>
+          <em>Oh Wau, Patitas!</em>
+          <small>OFFICE</small>
+        </span>
+      </a>
+      <nav>
+        <a href="#reminders">Reminders</a>
+        <a href="#money">Money</a>
+        <a href="#track">Tracking</a>
+        <a href="admin.html">Admin</a>
+        <a href="index.html">Website</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section" id="reminders">
+        <div class="wrap">
+          <h2>Prepare in two weeks</h2>
+          <p class="center-note">Birthdays and holidays that need bows, food, or a note.</p>
+          <div class="card-row" data-reminders></div>
+        </div>
+      </section>
+
+      <section class="section mist" id="money">
+        <div class="wrap">
+          <h2>Spending, gaining, projected</h2>
+          <div class="stats" data-money></div>
+          <div class="book-grid" style="margin-top: 2rem">
+            <form id="expense-form">
+              <label>Expense <input name="label" required /></label>
+              <label>Amount <input name="amount" type="number" min="0" step="0.01" required /></label>
+              <label>Date <input name="date" type="date" required /></label>
+              <button class="btn" type="submit">Add expense</button>
+            </form>
+            <div class="booking-list" data-expenses></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="track">
+        <div class="wrap">
+          <h2>Popular items &amp; linger time</h2>
+          <div class="card-row" data-popular></div>
+        </div>
+      </section>
+
+      <section class="section mist" id="calendar-office">
+        <div class="wrap book-grid">
+          <div>
+            <h2>Work calendar</h2>
+            <form id="email-form">
+              <label>Work email <input name="workEmail" type="email" required /></label>
+              <button class="btn" type="submit">Save &amp; connect</button>
+              <p class="empty" data-email-note>Bookings land here. Google Calendar sync for this inbox can be turned on next.</p>
+            </form>
+          </div>
+          <div>
+            <h2>Booking requests</h2>
+            <div class="booking-list" data-office-bookings></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="dogs">
+        <div class="wrap book-grid">
+          <div>
+            <h2>Dog birthdays</h2>
+            <form id="dog-form">
+              <label>Dog’s name <input name="name" required /></label>
+              <label>Owner <input name="owner" required /></label>
+              <label>Birthday <input name="birthday" type="date" required /></label>
+              <button class="btn" type="submit">Save pup</button>
+            </form>
+          </div>
+          <div class="booking-list" data-dogs></div>
+        </div>
+      </section>
+
+      <section class="section mist" id="reviews-office">
+        <div class="wrap book-grid">
+          <div>
+            <h2>Add a Google or Yelp review</h2>
+            <form id="review-form">
+              <label>Source
+                <select name="source">
+                  <option>Google</option>
+                  <option>Yelp</option>
+                </select>
+              </label>
+              <label>Name <input name="author" required /></label>
+              <label>Stars
+                <select name="stars">
+                  <option>5</option>
+                  <option>4</option>
+                  <option>3</option>
+                  <option>2</option>
+                  <option>1</option>
+                </select>
+              </label>
+              <label>Review <textarea name="text" required></textarea></label>
+              <button class="btn" type="submit">Publish on site</button>
+            </form>
+          </div>
+          <div class="booking-list" data-office-reviews></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Owner tools — same data as the website and app. <a href="admin.html">Open admin</a> to edit the calendar, services, and shop.</p>
+      <a href="index.html">Back to site</a>
+    </footer>
+
+    <script src="js/salon.js"></script>
+  </body>
+</html>

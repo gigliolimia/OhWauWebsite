@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!-- EDIT THIS: paste the Apps Script web app URL into REQUEST_URL at the top of js/estimate.js. Leave DRAFT = true until real quotes are ready. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Estimate &amp; request · Oh Wau, Patitas!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-page="estimate" class="paw-boot">
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png?v=paw2" alt="Oh Wau, Patitas!" />
+        <span>
+          <em>Oh Wau, Patitas!</em>
+          <small>PET CENTER</small>
+        </span>
+      </a>
+      <nav>
+        <a href="index.html" data-i18n="navHome">Home</a>
+        <a href="index.html#services" data-i18n="navServices">Services</a>
+        <a href="index.html#calendar" data-i18n="navCalendar">Calendar</a>
+        <a href="index.html#reviews" data-i18n="navReviews">Reviews</a>
+        <a href="index.html#faq" data-i18n="navFaq">FAQ</a>
+        <a class="nav-active" href="grooming-estimator-and-request.html" data-i18n="navEstimate">Estimate</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-tabs" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+        <a class="btn" href="#request" data-est="bookNow">Book now</a>
+      </div>
+    </header>
+
+    <p class="draft-banner" data-draft-banner hidden data-est="draftBanner">
+      Draft prices — estimates only. Final quotes come after we compare local groomers.
+    </p>
+
+    <main>
+      <section class="section">
+        <div class="wrap">
+          <p class="kicker" data-est="kicker">Grooming estimate</p>
+          <h2 data-est="title">Price your visit</h2>
+          <p class="center-note" data-est="lead">
+            Pick breed or size, how we meet, and a service. You’ll see a card price and a cash price, then you can send a request.
+          </p>
+
+          <div class="est-layout">
+            <form id="estimate-form" class="est-form" novalidate>
+              <fieldset>
+                <legend data-est="visitLegend">How should we do this?</legend>
+                <div class="est-choices">
+                  <label class="est-choice">
+                    <input type="radio" name="visitType" value="mobile" checked />
+                    <strong data-est="comeTitle">We come to you</strong>
+                    <span data-est="comeHelp">At-home grooming</span>
+                  </label>
+                  <label class="est-choice">
+                    <input type="radio" name="visitType" value="dropoff" />
+                    <strong data-est="dropTitle">You bring your pup to us</strong>
+                    <span data-est="dropHelp">Drop-off is cheaper</span>
+                  </label>
+                </div>
+                <p class="empty" data-drop-note></p>
+              </fieldset>
+
+              <label
+                ><span data-est="breed">Breed</span>
+                <select name="breed" id="est-breed" required>
+                  <option value="chihuahua">Chihuahua</option>
+                </select>
+              </label>
+              <label
+                ><span data-est="size">Size</span>
+                <select name="pupSize" id="est-size" required>
+                  <option value="xs">XS · under 10 lb</option>
+                </select>
+              </label>
+              <label
+                ><span data-est="coat">Coat</span>
+                <select name="coat">
+                  <option value="short" data-est="coatShort">Short</option>
+                  <option value="long" data-est="coatLong">Long / double / curly</option>
+                </select>
+              </label>
+              <p class="empty" data-haircut-note hidden></p>
+
+              <label
+                ><span data-est="service">Service</span>
+                <select name="service" required>
+                  <option value="bath">Bath &amp; Blow-Out</option>
+                  <option value="haircut">Breed-Specific Haircut</option>
+                  <option value="brush">Brush-Out</option>
+                </select>
+              </label>
+              <p class="est-live-bar" aria-live="polite">
+                <span data-est-summary></span>
+                <span>
+                  <span data-est="cardLabel">Card</span> <strong data-card-price>$0</strong>
+                  · <span data-est="cashLabel">Cash</span> <strong data-cash-price>$0</strong>
+                </span>
+              </p>
+
+              <fieldset class="est-addons">
+                <legend data-est="addons">Add-ons</legend>
+                <label class="check"><input type="checkbox" name="addon" value="nails" /> <span data-est="addonNails">Nail Trimming</span></label>
+                <label class="check"><input type="checkbox" name="addon" value="grind" /> <span data-est="addonGrind">Nail Grinding</span></label>
+                <label class="check"><input type="checkbox" name="addon" value="ears" /> <span data-est="addonEars">Ear Cleaning</span></label>
+                <label class="check"><input type="checkbox" name="addon" value="teeth" /> <span data-est="addonTeeth">Teeth Brushing &amp; Breath Spray</span></label>
+                <label class="check"><input type="checkbox" name="addon" value="facial" /> <span data-est="addonFacial">Berry Facial</span></label>
+                <label class="check"><input type="checkbox" name="addon" value="shampoo" /> <span data-est="addonShampoo">Enhanced Shampoo &amp; Conditioner</span></label>
+              </fieldset>
+
+              <div class="est-grid" id="request">
+                <label><span data-est="dogName">Dog’s name</span> <input name="dogName" required /></label>
+                <label><span data-est="owner">Your name</span> <input name="owner" required /></label>
+                <label><span data-est="phone">Phone</span> <input name="phone" type="tel" required /></label>
+                <label><span data-est="email">Email</span> <input name="email" type="email" /></label>
+                <label
+                  ><span data-est="area">Area</span>
+                  <select name="regionId">
+                    <option value="stlucie">St. Lucie County</option>
+                    <option value="martin">Martin County</option>
+                    <option value="indianriver">Indian River County</option>
+                    <option value="other">Nearby</option>
+                  </select>
+                </label>
+                <label><span data-est="date">Preferred date</span> <input name="date" type="date" /></label>
+                <label><span data-est="time">Preferred time</span> <input name="time" type="time" /></label>
+              </div>
+              <label><span data-est="notes">Notes</span> <textarea name="notes" rows="3" data-est-placeholder="notesPh"></textarea></label>
+              <label class="check">
+                <input name="disclosure" type="checkbox" required />
+                <span data-est="disclosureAgree">I have read and agree to the grooming disclosure.</span>
+              </label>
+              <p class="empty" data-est="disclosureBody">
+                I understand grooming involves bathing, clipping, and handling. I confirm my pet is reasonably healthy, current on vaccines as required, and I accept that coats, skin, and behavior can affect the result. Oh Wau, Patitas! is not liable for pre-existing conditions revealed during grooming. I agree to be present or reachable during the visit.
+              </p>
+              <p class="empty" data-est-error></p>
+              <button class="btn" type="submit" data-est="send">Send request</button>
+            </form>
+
+            <aside class="est-quote" data-est-quote>
+              <h3 data-est="quoteTitle">Your estimate</h3>
+              <p class="empty" data-est-summary></p>
+              <article class="est-price">
+                <span data-est="cardLabel">Card</span>
+                <strong data-card-price>$0</strong>
+              </article>
+              <article class="est-price cash">
+                <span data-est="cashLabel">Cash</span>
+                <strong data-cash-price>$0</strong>
+              </article>
+              <p class="empty" data-cash-save></p>
+              <p class="empty" data-est="quoteNote">Cash is lower by the card-machine fee. This is an estimate — we’ll confirm after we see coat and temperament.</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer stacked">
+      <div class="contact-tiles">
+        <a href="sms:9549136161"><strong data-i18n="callText">Call / text</strong><span>(954) 913-6161</span></a>
+        <a href="mailto:gmilallc1@gmail.com"><strong data-i18n="emailUs">Email</strong><span>gmilallc1@gmail.com</span></a>
+        <a href="https://wa.me/19549136161"><strong data-i18n="whatsapp">WhatsApp</strong><span data-i18n="messageUs">Message us</span></a>
+      </div>
+      <p>
+        <span data-i18n="footerNote">Oh Wau, Patitas! · Pet Center · Florida ·</span>
+        <a href="app.html" data-i18n="appLink">App</a> ·
+        <a href="office.html" data-i18n="officeLink">Office</a> ·
+        <a href="admin.html" data-i18n="adminLink">Admin</a>
+      </p>
+    </footer>
+
+    <script src="js/salon.js"></script>
+    <script src="js/estimate.js"></script>
+  </body>
+</html>

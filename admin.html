@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin · Oh Wau, Patitas!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-page="admin">
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png?v=paw2" alt="" />
+        <span>
+          <em>Oh Wau, Patitas!</em>
+          <small>ADMIN</small>
+        </span>
+      </a>
+      <nav>
+        <a href="#home-copy">Homepage</a>
+        <a href="#services-admin">Services</a>
+        <a href="#shop-admin">Accessories</a>
+        <a href="#calendar-admin">Calendar</a>
+        <a href="#birthdays-admin">Birthdays</a>
+        <a href="office.html">Office</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section" id="home-copy">
+        <div class="wrap">
+          <p class="kicker">Homepage</p>
+          <h2>Update home page copy</h2>
+          <form id="home-form" class="admin-card">
+            <label>Headline (EN) <input name="heroTitleEn" /></label>
+            <label>Slogan (EN) <input name="heroSloganEn" /></label>
+            <label>Proof line (EN) <input name="heroProofEn" /></label>
+            <label>Headline (ES) <input name="heroTitleEs" /></label>
+            <label>Slogan (ES) <input name="heroSloganEs" /></label>
+            <label>Proof line (ES) <input name="heroProofEs" /></label>
+            <button class="btn" type="submit">Save homepage</button>
+            <p class="empty" data-home-note></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section mist" id="services-admin">
+        <div class="wrap book-grid">
+          <div>
+            <h2>Services &amp; packages</h2>
+            <form id="service-form" class="admin-card">
+              <label>Name <input name="name" required /></label>
+              <label>Spanish name <input name="nameEs" /></label>
+              <label>Price <input name="price" type="number" min="0" step="1" required /></label>
+              <label>Kind
+                <select name="kind">
+                  <option value="service">Service / package</option>
+                  <option value="addon">Add-on</option>
+                </select>
+              </label>
+              <label>Duration <input name="duration" placeholder="About 1 hour" /></label>
+              <label>Description <textarea name="blurb" required></textarea></label>
+              <label>Spanish description <textarea name="blurbEs"></textarea></label>
+              <label class="check"><input name="featured" type="checkbox" /> <span>Mark as popular</span></label>
+              <button class="btn" type="submit">Add service</button>
+            </form>
+          </div>
+          <div class="admin-list" data-admin-services></div>
+        </div>
+      </section>
+
+      <section class="section" id="shop-admin">
+        <div class="wrap book-grid">
+          <div>
+            <h2>Accessories &amp; foods</h2>
+            <form id="shop-form" class="admin-card">
+              <label>Name <input name="name" required /></label>
+              <label>Kind
+                <select name="kind">
+                  <option value="accessory">Accessory</option>
+                  <option value="food">Food</option>
+                </select>
+              </label>
+              <label>Season <input name="season" required /></label>
+              <label>Price <input name="price" type="number" min="0" step="1" required /></label>
+              <button class="btn" type="submit">Add item</button>
+            </form>
+          </div>
+          <div class="admin-list" data-admin-shop></div>
+        </div>
+      </section>
+
+      <section class="section mist" id="calendar-admin">
+        <div class="wrap book-grid">
+          <div>
+            <h2>Calendar activities</h2>
+            <form id="activity-form" class="admin-card">
+              <label>Month <select name="month" required></select></label>
+              <label>Day of month <input name="day" type="number" min="1" max="31" required /></label>
+              <label>Title <input name="title" required /></label>
+              <label>Spanish title <input name="titleEs" /></label>
+              <label>Kind
+                <select name="kind">
+                  <option value="activity">Activity</option>
+                  <option value="food">Food</option>
+                </select>
+              </label>
+              <button class="btn" type="submit">Add activity</button>
+              <p class="empty">Each month the website calendar switches on its own and only shows that month’s activities, birthdays, and open days.</p>
+            </form>
+          </div>
+          <div class="admin-list" data-admin-plan></div>
+        </div>
+      </section>
+
+      <section class="section" id="birthdays-admin">
+        <div class="wrap book-grid">
+          <div>
+            <h2>Birthday pups</h2>
+            <form id="bday-admin-form" class="admin-card">
+              <label>Dog’s name <input name="name" required /></label>
+              <label>Owner <input name="owner" required /></label>
+              <label>Birthday <input name="birthday" type="date" required /></label>
+              <label>Phone <input name="phone" type="tel" /></label>
+              <button class="btn" type="submit">Add birthday</button>
+              <p class="empty">Pups added here show on the homepage in their birthday month.</p>
+            </form>
+          </div>
+          <div class="admin-list" data-admin-dogs></div>
+        </div>
+      </section>
+
+      <section class="section mist" id="birthday-submissions">
+        <div class="wrap">
+          <h2>Birthday submissions</h2>
+          <p class="center-note">Approve a public request to publish it, or add one with the form above.</p>
+          <div class="admin-list" data-admin-bdays></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Content tools — updates show on the website and in the app.</p>
+      <a href="office.html">Office</a> · <a href="index.html">Website</a>
+    </footer>
+
+    <script src="js/salon.js"></script>
+  </body>
+</html>

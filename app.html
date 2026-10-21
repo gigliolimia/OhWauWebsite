@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Oh Wau, Patitas!</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#090503" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-page="app" class="app paw-boot">
+    <div class="app-shell">
+      <header class="app-top">
+        <img class="app-logo" src="images/logo.png?v=paw2" alt="Oh Wau, Patitas!" />
+        <div class="lang-tabs" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+        <p>Pet Center · <a href="index.html">Website</a></p>
+      </header>
+
+      <div class="app-screens">
+        <section data-screen="home" class="active">
+          <div class="app-hero">
+            <strong data-i18n="statOff">$10 off</strong>
+            <p data-i18n="heroSlogan">For all your grooming needs and furry friends necessities.</p>
+          </div>
+          <h2 data-i18n="bdayTitle">Birthday doggies</h2>
+          <div data-birthdays></div>
+          <h2 data-i18n="upcoming">Upcoming</h2>
+          <div class="booking-list" data-bookings></div>
+        </section>
+
+        <section data-screen="services">
+          <h2 data-i18n="navServices">Services</h2>
+          <div data-service-tabs></div>
+        </section>
+
+        <section data-screen="club">
+          <h2 data-i18n="clubTitle">Rewards club</h2>
+          <form id="signup-form">
+            <label><span data-i18n="yourName">Your name</span> <input name="name" required /></label>
+            <label><span data-i18n="email">Email</span> <input name="email" type="email" required /></label>
+            <label><span data-i18n="phone">Phone</span> <input name="phone" type="tel" required /></label>
+            <button class="btn" type="submit" data-i18n="joinClub">Join the club</button>
+            <p class="empty" data-signup-note></p>
+          </form>
+          <div data-member></div>
+        </section>
+
+        <section data-screen="book">
+          <h2 data-i18n="bookTitle">Request a booking</h2>
+          <p class="empty" data-i18n="bookModalHelp">Choose a service and add-ons, then send a request.</p>
+          <a class="btn" href="grooming-estimator-and-request.html" data-i18n="bookNow">Book now</a>
+        </section>
+      </div>
+
+      <nav class="tabs tabs-4">
+        <button type="button" data-tab="home" class="active" data-i18n="navHome">Home</button>
+        <button type="button" data-tab="services" data-i18n="navServices">Services</button>
+        <button type="button" data-tab="club">Club</button>
+        <button type="button" data-tab="book" data-i18n="bookNow">Book now</button>
+      </nav>
+
+      <aside class="mia-assist" data-mia-assist>
+        <div class="mia-panel" hidden data-mia-panel>
+          <header class="mia-head">
+            <img class="mia-mascot" src="images/mia-open.png" data-mia-wink alt="" />
+            <div>
+              <strong data-i18n="miaName">Mia</strong>
+              <span data-i18n="miaRole">Your helper</span>
+            </div>
+            <button type="button" class="mia-x" data-mia-close aria-label="Close">×</button>
+          </header>
+          <div class="mia-chips">
+            <button type="button" data-mia-chip="fees" data-i18n="miaChipFees">Fees</button>
+            <button type="button" data-mia-chip="calendar" data-i18n="miaChipCal">Calendar</button>
+            <button type="button" data-mia-chip="services" data-i18n="miaChipServices">Services</button>
+            <button type="button" data-mia-chip="book" data-i18n="miaChipBook">Book</button>
+          </div>
+          <div class="mia-log" data-mia-log></div>
+          <form class="mia-form" data-mia-form>
+            <input name="q" data-mia-input data-i18n-placeholder="miaInput" placeholder="Ask about fees, calendar, or booking" autocomplete="off" />
+            <button class="btn" type="submit" data-i18n="miaSend">Send</button>
+          </form>
+        </div>
+        <button class="mia-fab" type="button" data-mia-toggle>
+          <img class="mia-mascot" src="images/mia-open.png" data-mia-wink alt="" />
+          <span data-i18n="miaAsk">Ask Mia</span>
+        </button>
+      </aside>
+    </div>
+
+    <script src="js/salon.js"></script>
+  </body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Oh Wau, Patitas! · Pet Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-page="site" class="paw-boot">
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png?v=paw2" alt="Oh Wau, Patitas!" />
+        <span>
+          <em>Oh Wau, Patitas!</em>
+          <small>PET CENTER</small>
+        </span>
+      </a>
+      <nav>
+        <a class="nav-active" href="index.html" data-i18n="navHome">Home</a>
+        <a href="#services" data-i18n="navServices">Services</a>
+        <a href="#calendar" data-i18n="navCalendar">Calendar</a>
+        <a href="#reviews" data-i18n="navReviews">Reviews</a>
+        <a href="#faq" data-i18n="navFaq">FAQ</a>
+        <a href="grooming-estimator-and-request.html" data-i18n="navEstimate">Estimate</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-tabs" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+        <a class="btn" href="grooming-estimator-and-request.html" data-i18n="bookNow">Book now</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="wrap">
+        <div class="hero-banner">
+          <img class="hero-mark" src="images/logo.png?v=paw2" alt="" />
+          <div class="hero-bottom">
+            <div>
+              <h1 data-i18n="heroTitle">Gentle at-home grooming</h1>
+              <p data-i18n="heroSlogan">For all your grooming needs and furry friends necessities.</p>
+              <a class="btn" href="grooming-estimator-and-request.html" data-i18n="bookNow">Book now</a>
+            </div>
+            <p class="hero-proof" data-i18n="heroProof">At-home care · Florida</p>
+          </div>
+        </div>
+        <div class="stats-row">
+          <article class="stat-card stat-home">
+            <img class="mia-mascot" src="images/mia-open.png" data-mia-wink alt="Mia" />
+            <div>
+              <strong data-i18n="statHome">At home</strong>
+              <span data-i18n="statHomeNote">We come to you</span>
+            </div>
+          </article>
+          <article class="stat-card stacked">
+            <strong data-i18n="statOff">$10 off</strong>
+            <span data-i18n="statOffNote">Your first visit</span>
+          </article>
+          <article class="stat-card stacked">
+            <strong data-i18n="statEs">Español</strong>
+            <span data-i18n="statEsNote">We speak Spanish</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="wrap">
+          <p class="kicker" data-i18n="groomingKicker">Grooming</p>
+          <h2 data-i18n="groomingTitle">Grooming services</h2>
+          <p class="center-note"><span data-i18n="pricesFor">Prices for</span> <span data-region-label>your area</span>.</p>
+          <div data-service-tabs></div>
+          <p class="haircut-note" data-i18n="haircutNote">If a short-hair breed requires a haircut, long-hair pricing will apply.</p>
+        </div>
+      </section>
+
+      <section class="section mist" id="how">
+        <div class="wrap">
+          <p class="kicker" data-i18n="howKicker">How we work</p>
+          <h2 data-i18n="howTitle">A calm visit, start to finish</h2>
+          <div class="steps">
+            <article>
+              <strong>1</strong>
+              <h3 data-i18n="how1Title">Request a day</h3>
+              <p data-i18n="how1Body">Tell us the pup, the service, and a time that works at home.</p>
+            </article>
+            <article>
+              <strong>2</strong>
+              <h3 data-i18n="how2Title">We come to you</h3>
+              <p data-i18n="how2Body">Grooming happens in your space — less stress, no salon wait.</p>
+            </article>
+            <article>
+              <strong>3</strong>
+              <h3 data-i18n="how3Title">Happy walk-out</h3>
+              <p data-i18n="how3Body">Points for the club, a bow if they want one, and a date for next time.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="birthdays">
+        <div class="wrap book-grid">
+          <div>
+            <p class="kicker" data-i18n="bdayKicker">This month</p>
+            <h2 data-i18n="bdayTitle">Birthday doggies</h2>
+            <div class="card-row" data-birthdays></div>
+          </div>
+          <form id="bday-form" class="bday-submit">
+            <h3 data-i18n="bdaySubmitTitle">Submit a birthday</h3>
+            <p class="empty" data-i18n="bdaySubmitHelp">We’ll review it before it appears on the site.</p>
+            <label><span data-i18n="dogName">Dog’s name</span> <input name="name" required /></label>
+            <label><span data-i18n="owner">Owner</span> <input name="owner" required /></label>
+            <label><span data-i18n="birthday">Birthday</span> <input name="birthday" type="date" required /></label>
+            <label><span data-i18n="phone">Phone</span> <input name="phone" type="tel" /></label>
+            <button class="btn" type="submit" data-i18n="sendForReview">Send for review</button>
+            <p class="empty" data-bday-note></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section mist" id="calendar">
+        <div class="wrap">
+          <p class="kicker" data-i18n="calKicker">Calendar</p>
+          <h2><span data-month-name>This month</span> <span data-i18n="calSuffix">activity &amp; food</span></h2>
+          <div class="cal-layout">
+            <aside class="cal-alerts">
+              <h3 data-i18n="calAlerts">Activity alerts</h3>
+              <ul data-cal-alerts></ul>
+            </aside>
+            <div data-month-cal></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="shop">
+        <div class="wrap">
+          <p class="kicker" data-i18n="shopKicker">Seasonal</p>
+          <h2 data-i18n="shopTitle">Holiday accessories &amp; foods</h2>
+          <div class="shop-grid" data-shop></div>
+        </div>
+      </section>
+
+      <section class="section mist" id="reviews">
+        <div class="wrap">
+          <p class="kicker" data-i18n="reviewsKicker">Testimonials</p>
+          <h2 data-i18n="reviewsTitle">Google &amp; Yelp</h2>
+          <div class="card-row" data-reviews></div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="wrap faq">
+          <p class="kicker" data-i18n="faqKicker">FAQ</p>
+          <h2 data-i18n="faqTitle">Have a question? We’re here to help.</h2>
+          <details>
+            <summary data-i18n="faq1q">Do you come to my home?</summary>
+            <p data-i18n="faq1a">Yes. Oh Wau, Patitas! is at-home pet care in St. Lucie County and nearby.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq2q">What’s included in a visit?</summary>
+            <p data-i18n="faq2a">Bath & Blow-Out, breed-specific haircuts, and add-ons like nails, ears, teeth, and a berry facial. Pick what you need when you book.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq3q">Is grooming okay for anxious pets?</summary>
+            <p data-i18n="faq3a">Home visits are often calmer. Tell us about temperament in the notes and we’ll go gently.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq4q">Do I need to agree to anything before booking?</summary>
+            <p data-i18n="faq4a">Yes. There’s a short grooming disclosure to check before a request is sent.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section mist" id="rewards">
+        <div class="wrap book-grid">
+          <div>
+            <h2 data-i18n="clubTitle">Rewards club</h2>
+            <form id="signup-form">
+              <label><span data-i18n="yourName">Your name</span> <input name="name" required /></label>
+              <label><span data-i18n="email">Email</span> <input name="email" type="email" required /></label>
+              <label><span data-i18n="phone">Phone</span> <input name="phone" type="tel" required /></label>
+              <button class="btn" type="submit" data-i18n="joinClub">Join the club</button>
+              <p class="empty" data-signup-note></p>
+            </form>
+          </div>
+          <div>
+            <h2 data-i18n="pointsTitle">Your points</h2>
+            <div data-member></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="book">
+        <div class="wrap">
+          <h2 data-i18n="upcoming">Upcoming</h2>
+          <div class="booking-list" data-bookings></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer stacked">
+      <div class="contact-tiles">
+        <a href="sms:9549136161"><strong data-i18n="callText">Call / text</strong><span>(954) 913-6161</span></a>
+        <a href="mailto:gmilallc1@gmail.com"><strong data-i18n="emailUs">Email</strong><span>gmilallc1@gmail.com</span></a>
+        <a href="https://wa.me/19549136161"><strong data-i18n="whatsapp">WhatsApp</strong><span data-i18n="messageUs">Message us</span></a>
+      </div>
+      <p><span data-i18n="footerNote">Oh Wau, Patitas! · Pet Center · Florida ·</span> <a href="app.html" data-i18n="appLink">App</a> · <a href="office.html" data-i18n="officeLink">Office</a> · <a href="admin.html" data-i18n="adminLink">Admin</a></p>
+    </footer>
+
+    <aside class="mia-assist" data-mia-assist>
+      <div class="mia-panel" hidden data-mia-panel>
+        <header class="mia-head">
+          <img class="mia-mascot" src="images/mia-open.png" data-mia-wink alt="" />
+          <div>
+            <strong data-i18n="miaName">Mia</strong>
+            <span data-i18n="miaRole">Your helper</span>
+          </div>
+          <button type="button" class="mia-x" data-mia-close aria-label="Close">×</button>
+        </header>
+        <div class="mia-chips">
+          <button type="button" data-mia-chip="fees" data-i18n="miaChipFees">Fees</button>
+          <button type="button" data-mia-chip="calendar" data-i18n="miaChipCal">Calendar</button>
+          <button type="button" data-mia-chip="services" data-i18n="miaChipServices">Services</button>
+          <button type="button" data-mia-chip="book" data-i18n="miaChipBook">Book</button>
+        </div>
+        <div class="mia-log" data-mia-log></div>
+        <form class="mia-form" data-mia-form>
+          <input name="q" data-mia-input data-i18n-placeholder="miaInput" placeholder="Ask about fees, calendar, or booking" autocomplete="off" />
+          <button class="btn" type="submit" data-i18n="miaSend">Send</button>
+        </form>
+      </div>
+      <button class="mia-fab" type="button" data-mia-toggle>
+        <img class="mia-mascot" src="images/mia-open.png" data-mia-wink alt="" />
+        <span data-i18n="miaAsk">Ask Mia</span>
+      </button>
+    </aside>
+
+    <script src="js/salon.js"></script>
+  </body>
+</html>
