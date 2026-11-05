@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Allura&family=Outfit:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Bitter:wght@700;800&family=Source+Sans+3:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -16,18 +16,21 @@
   </head>
   <body data-page="estimate" class="paw-boot">
     <header class="site-header">
-      <a class="brand" href="index.html">
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+      <a class="brand logo-only" href="index.html">
         <img src="images/logo.png?v=paw2" alt="Oh Wau, Patitas!" />
         <span>
           <em>Oh Wau, Patitas!</em>
           <small>PET CENTER</small>
         </span>
       </a>
-      <nav>
+      <nav data-site-nav>
         <a href="index.html" data-i18n="navHome">Home</a>
-        <a href="index.html#services" data-i18n="navServices">Services</a>
-        <a href="index.html#calendar" data-i18n="navCalendar">Calendar</a>
-        <a href="index.html#reviews" data-i18n="navReviews">Reviews</a>
+        <a href="services.html" data-i18n="navServices">Services</a>
+        <a href="about.html" data-i18n="navAbout">About Oh Wau</a>
+        <a href="index.html#testimonials" data-i18n="navTestimonials">Testimonials</a>
         <a href="index.html#faq" data-i18n="navFaq">FAQ</a>
         <a class="nav-active" href="grooming-estimator-and-request.html" data-i18n="navEstimate">Estimate</a>
       </nav>
@@ -36,7 +39,7 @@
           <button type="button" data-lang="en" aria-pressed="true">EN</button>
           <button type="button" data-lang="es" aria-pressed="false">ES</button>
         </div>
-        <a class="btn" href="#request" data-est="bookNow">Book now</a>
+        <a class="phone-pill" href="tel:9549136161">(954) 913-6161</a>
       </div>
     </header>
 
@@ -168,17 +171,27 @@
     </main>
 
     <footer class="site-footer stacked">
-      <div class="contact-tiles">
-        <a href="sms:9549136161"><strong data-i18n="callText">Call / text</strong><span>(954) 913-6161</span></a>
-        <a href="mailto:gmilallc1@gmail.com"><strong data-i18n="emailUs">Email</strong><span>gmilallc1@gmail.com</span></a>
-        <a href="https://wa.me/19549136161"><strong data-i18n="whatsapp">WhatsApp</strong><span data-i18n="messageUs">Message us</span></a>
+      <div class="footer-inner">
+        <a class="footer-brand" href="index.html">
+          <img src="images/logo.png?v=paw2" alt="Oh Wau, Patitas!" />
+          <span>
+            <em>Oh Wau, Patitas!</em>
+            <small>PET CENTER · FLORIDA</small>
+          </span>
+        </a>
+        <div class="contact-tiles">
+          <a href="sms:9549136161"><strong data-i18n="callText">Call / text</strong><span>(954) 913-6161</span></a>
+          <a href="mailto:gmilallc1@gmail.com"><strong data-i18n="emailUs">Email</strong><span>gmilallc1@gmail.com</span></a>
+          <a href="https://wa.me/19549136161"><strong data-i18n="whatsapp">WhatsApp</strong><span data-i18n="messageUs">Message us</span></a>
+        </div>
+        <p class="hablamos" data-i18n="hablamos">Hablamos Español!</p>
+        <p class="footer-meta">
+          <span data-i18n="footerNote">Oh Wau, Patitas! · Pet Center · Florida ·</span>
+          <a href="app.html" data-i18n="appLink">App</a> ·
+          <a href="office.html" data-i18n="officeLink">Office</a> ·
+          <a href="admin.html" data-i18n="adminLink">Admin</a>
+        </p>
       </div>
-      <p>
-        <span data-i18n="footerNote">Oh Wau, Patitas! · Pet Center · Florida ·</span>
-        <a href="app.html" data-i18n="appLink">App</a> ·
-        <a href="office.html" data-i18n="officeLink">Office</a> ·
-        <a href="admin.html" data-i18n="adminLink">Admin</a>
-      </p>
     </footer>
 
     <script src="js/salon.js"></script>

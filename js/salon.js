@@ -19,13 +19,58 @@ const I18N = {
     navHome: "Home",
     navServices: "Services",
     navCalendar: "Calendar",
-    navReviews: "Reviews",
+    navReviews: "Testimonials",
+    navTestimonials: "Testimonials",
+    navAbout: "About Oh Wau",
     navFaq: "FAQ",
     navEstimate: "Estimate",
+    navLogin: "Log in",
+    navProfile: "Profile",
+    offeringGrooming: "Mobile grooming",
+    offeringGroomingNote: "We come to you",
+    offeringDaycare: "Pet day care",
+    offeringDaycareNote: "Daytime care in a calm space",
+    offeringSitting: "Pet sitting",
+    offeringSittingNote: "Care at home while you’re away",
+    offeringBoarding: "Pet boarding",
+    offeringBoardingNote: "Overnight stays with gentle care",
     bookNow: "Book now",
+    learnMore: "Learn more",
+    needTitle: "Everything you need, all in one place",
+    needLead: "Mobile grooming, pet day care, pet sitting, and pet boarding.",
+    bannerTitle: "Gentle at-home grooming in St. Lucie County",
+    bannerLead: "Our professional team provides exceptional grooming service.",
+    whyKicker: "Why us",
+    whyTitle: "Why dog owners choose Oh Wau",
+    why1Title: "We come to you",
+    why1Body: "Grooming happens in your space — less stress, no salon wait.",
+    why2Title: "Less stress on you and your pet",
+    why2Body: "Home visits are often calmer. Tell us about temperament and we’ll go gently.",
+    why3Title: "One pup, full attention",
+    why3Body: "Bath & Blow-Out, breed-specific haircuts, and add-ons picked for your dog.",
+    why4Title: "St. Lucie and nearby",
+    why4Body: "We speak Spanish, and we’re at home in St. Lucie County and nearby.",
+    areaTitle: "Service area",
+    areaBody: "St. Lucie County · Martin County · Indian River County · nearby",
+    hablamos: "Hablamos Español!",
+    svcHeroTitle: "Grooming for your dog without leaving home",
+    svcHeroLead: "We come to you in St. Lucie County and nearby. Pick a bath, a breed-specific haircut, and the add-ons your pup needs.",
+    svcBannerTitle: "Give your pet the spa treatment — at home",
+    svcBannerLead: "Bath & Blow-Out, breed-specific haircuts, nails, ears, teeth, and a berry facial. Pick what you need when you book.",
+    svcProcessTitle: "How a visit works",
+    svcProcess2Title: "One pup at a time",
+    svcProcess2Body: "Your dog gets individual attention from start to finish — no salon cage, no waiting next to other dogs.",
+    aboutHero: "People trust us, pets love us",
+    aboutLead: "Your pet deserves the best. Oh Wau, Patitas! is gentle at-home grooming in St. Lucie County and nearby — for all your grooming needs and furry friends necessities.",
+    whoTitle: "Who we are",
+    whoBody: "Oh Wau, Patitas! is at-home pet care. We come to you so grooming happens in your space — a calm visit, start to finish, with less stress and no salon wait.",
+    whyAboutTitle: "Why Oh Wau?",
+    whyAboutBody: "We enjoy seeing your furry friends happy. If they are happy, we are happy too. We offer services at your convenience, a warm and friendly visit, and we treat every pup as if they were our own.",
+    teamTitle: "Our team",
+    teamBody: "Meet Mia, our Shiba helper, and a groomer who goes gently with anxious pets. Tell us the pup, the service, and a time that works at home — then we’ll see you there.",
     langLabel: "Language",
     heroTitle: "Gentle at-home grooming",
-    heroSlogan: "For all your grooming needs and furry friends necessities.",
+    heroSlogan: "For all your pets needs",
     heroProof: "At-home care · Florida",
     statHome: "At home",
     statHomeNote: "We come to you",
@@ -67,8 +112,8 @@ const I18N = {
     shopKicker: "Seasonal",
     shopTitle: "Holiday accessories & foods",
     reviewsKicker: "Testimonials",
-    reviewsTitle: "Google & Yelp",
-    reviewsEmpty: "Google and Yelp reviews will appear here as they’re posted.",
+    reviewsTitle: "What our customers say",
+    reviewsEmpty: "Google and Yelp testimonials will appear here as they’re posted.",
     faqKicker: "FAQ",
     faqTitle: "Have a question? We’re here to help.",
     faq1q: "Do you come to my home?",
@@ -88,6 +133,39 @@ const I18N = {
     memberEmpty: "Join the club for points on every visit. 20 points to start, 10 more each booking. 100 points = $10 off.",
     welcomeClub: "Welcome to the club — 20 points are waiting.",
     emailTaken: "That email is already in the club.",
+    usernameTaken: "That username is already taken.",
+    loginBad: "Username or password doesn’t match.",
+    needAccount: "Create an account to save pets, pay, and book.",
+    createAccount: "Create account",
+    logIn: "Log in",
+    logOut: "Log out",
+    username: "Username",
+    password: "Password",
+    displayName: "Your name",
+    profilePhoto: "Profile photo",
+    yourPets: "Your pets",
+    addPet: "Add a pet",
+    petBreed: "Breed",
+    petAge: "Age",
+    petBio: "Profile description",
+    petPhoto: "Pet photo",
+    saveProfile: "Save profile",
+    saved: "Saved.",
+    payMethod: "Payment method",
+    payCard: "Card",
+    payGift: "Gift card",
+    payCash: "Cash",
+    cardLast4: "Last 4 digits",
+    remindersOn: "Email me reminders for upcoming appointments",
+    schedulePet: "Schedule a service",
+    choosePet: "Choose a pet",
+    offering: "Offering",
+    upcomingReminders: "Upcoming",
+    reminderSet: "We’ll email a reminder to",
+    noPetsYet: "Add a pet to schedule a visit.",
+    accountHero: "Your Oh Wau account",
+    accountLead: "Save pets, pick how you pay, and book a visit for a specific pup.",
+    loginHero: "Log in or create an account",
     bookTitle: "Request a booking",
     bookModalHelp: "Choose a service and add-ons, then send a request.",
     dogName: "Dog’s name",
@@ -215,13 +293,58 @@ const I18N = {
     navHome: "Inicio",
     navServices: "Servicios",
     navCalendar: "Calendario",
-    navReviews: "Reseñas",
+    navReviews: "Testimonios",
+    navTestimonials: "Testimonios",
+    navAbout: "Sobre Oh Wau",
     navFaq: "Preguntas",
     navEstimate: "Cotizar",
+    navLogin: "Entrar",
+    navProfile: "Perfil",
+    offeringGrooming: "Grooming móvil",
+    offeringGroomingNote: "Vamos a ti",
+    offeringDaycare: "Guardería",
+    offeringDaycareNote: "Cuidado de día, con calma",
+    offeringSitting: "Pet sitting",
+    offeringSittingNote: "Cuidado en casa mientras no estás",
+    offeringBoarding: "Hospedaje",
+    offeringBoardingNote: "Estadías nocturnas con cuidado suave",
     bookNow: "Reservar",
+    learnMore: "Saber más",
+    needTitle: "Todo lo que necesitas, en un solo lugar",
+    needLead: "Grooming móvil, guardería, pet sitting y hospedaje.",
+    bannerTitle: "Grooming suave en casa en el condado de St. Lucie",
+    bannerLead: "Nuestro equipo profesional ofrece un grooming excepcional.",
+    whyKicker: "Por qué nos eligen",
+    whyTitle: "Por qué los dueños eligen Oh Wau",
+    why1Title: "Vamos a ti",
+    why1Body: "El grooming es en tu espacio — menos estrés, sin espera de salón.",
+    why2Title: "Menos estrés para ti y tu peludo",
+    why2Body: "Las visitas en casa suelen ser más calmadas. Cuéntanos el temperamento y vamos con calma.",
+    why3Title: "Un peludo, atención completa",
+    why3Body: "Baño y secado, cortes según raza y extras elegidos para tu perrito.",
+    why4Title: "St. Lucie y cerca",
+    why4Body: "Hablamos español, y estamos en el condado de St. Lucie y cerca.",
+    areaTitle: "Zona de servicio",
+    areaBody: "Condado de St. Lucie · Condado de Martin · Condado de Indian River · cerca",
+    hablamos: "¡Hablamos Español!",
+    svcHeroTitle: "Grooming para tu perrito sin salir de casa",
+    svcHeroLead: "Vamos a ti en el condado de St. Lucie y cerca. Elige baño, corte según raza y los extras que necesite.",
+    svcBannerTitle: "Dale a tu peludo un spa — en casa",
+    svcBannerLead: "Baño y secado, cortes según raza, uñas, oídos, dientes y facial de berries. Elige lo que necesites al reservar.",
+    svcProcessTitle: "Cómo es una visita",
+    svcProcess2Title: "Un peludo a la vez",
+    svcProcess2Body: "Tu perrito recibe atención individual de principio a fin — sin jaula de salón, sin espera junto a otros perros.",
+    aboutHero: "La gente confía en nosotras, las mascotas nos quieren",
+    aboutLead: "Tu peludo merece lo mejor. Oh Wau, Patitas! es grooming suave en casa en el condado de St. Lucie y cerca — para todas tus necesidades de grooming y lo que tus peluditos necesiten.",
+    whoTitle: "Quiénes somos",
+    whoBody: "Oh Wau, Patitas! es cuidado en casa. Vamos a ti para que el grooming sea en tu espacio — una visita calmada, de principio a fin, con menos estrés y sin espera de salón.",
+    whyAboutTitle: "¿Por qué Oh Wau?",
+    whyAboutBody: "Nos encanta ver felices a tus peluditos. Si ellos están felices, nosotras también. Ofrecemos el servicio a tu conveniencia, una visita cálida y tratamos a cada perrito como si fuera nuestro.",
+    teamTitle: "Nuestro equipo",
+    teamBody: "Conoce a Mia, nuestra ayudante Shiba, y a una groomer que va con calma con mascotas ansiosas. Cuéntanos del peludo, el servicio y un horario que sirva en casa — y nos vemos allí.",
     langLabel: "Idioma",
     heroTitle: "Grooming suave en casa",
-    heroSlogan: "Para todas tus necesidades de grooming y lo que tus peluditos necesiten.",
+    heroSlogan: "Para todas las necesidades de tus mascotas",
     heroProof: "Cuidado en casa · Florida",
     statHome: "En casa",
     statHomeNote: "Vamos a ti",
@@ -263,8 +386,8 @@ const I18N = {
     shopKicker: "Temporada",
     shopTitle: "Accesorios y comidas de temporada",
     reviewsKicker: "Testimonios",
-    reviewsTitle: "Google y Yelp",
-    reviewsEmpty: "Las reseñas de Google y Yelp aparecerán aquí cuando se publiquen.",
+    reviewsTitle: "Lo que dicen nuestros clientes",
+    reviewsEmpty: "Los testimonios de Google y Yelp aparecerán aquí cuando se publiquen.",
     faqKicker: "Preguntas",
     faqTitle: "¿Tienes una pregunta? Estamos para ayudarte.",
     faq1q: "¿Van a mi casa?",
@@ -284,6 +407,39 @@ const I18N = {
     memberEmpty: "Únete al club para puntos en cada visita. 20 al empezar, 10 más por reserva. 100 puntos = $10 de descuento.",
     welcomeClub: "Bienvenida al club — ya tienes 20 puntos.",
     emailTaken: "Ese correo ya está en el club.",
+    usernameTaken: "Ese usuario ya está en uso.",
+    loginBad: "Usuario o contraseña no coinciden.",
+    needAccount: "Crea una cuenta para guardar mascotas, pagar y reservar.",
+    createAccount: "Crear cuenta",
+    logIn: "Entrar",
+    logOut: "Salir",
+    username: "Usuario",
+    password: "Contraseña",
+    displayName: "Tu nombre",
+    profilePhoto: "Foto de perfil",
+    yourPets: "Tus mascotas",
+    addPet: "Agregar mascota",
+    petBreed: "Raza",
+    petAge: "Edad",
+    petBio: "Descripción",
+    petPhoto: "Foto de la mascota",
+    saveProfile: "Guardar perfil",
+    saved: "Guardado.",
+    payMethod: "Método de pago",
+    payCard: "Tarjeta",
+    payGift: "Tarjeta de regalo",
+    payCash: "Efectivo",
+    cardLast4: "Últimos 4 dígitos",
+    remindersOn: "Recuérdame por correo las citas próximas",
+    schedulePet: "Agendar un servicio",
+    choosePet: "Elige una mascota",
+    offering: "Servicio",
+    upcomingReminders: "Próximas",
+    reminderSet: "Enviaremos un recordatorio a",
+    noPetsYet: "Agrega una mascota para agendar.",
+    accountHero: "Tu cuenta Oh Wau",
+    accountLead: "Guarda mascotas, elige cómo pagar y reserva para un peludo en específico.",
+    loginHero: "Entra o crea una cuenta",
     bookTitle: "Pedir una cita",
     bookModalHelp: "Elige un servicio y extras, luego envía la solicitud.",
     dogName: "Nombre del perrito",
@@ -915,6 +1071,13 @@ const Analytics = {
   },
 };
 
+async function sha256(text) {
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(`owp:${text}`));
+  return Array.from(new Uint8Array(buf))
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join("");
+}
+
 const Members = {
   list() {
     return Store.get(KEYS.members, []);
@@ -926,11 +1089,30 @@ const Members = {
   save(list) {
     Store.set(KEYS.members, list);
   },
+  put(member) {
+    const list = this.list();
+    const i = list.findIndex((m) => m.id === member.id || m.email === member.email);
+    if (i >= 0) list[i] = member;
+    else list.push(member);
+    this.save(list);
+    return member;
+  },
   signup(data) {
     const list = this.list();
     if (list.some((m) => m.email === data.email)) return { error: t("emailTaken") };
+    if (data.username && list.some((m) => String(m.username || "").toLowerCase() === String(data.username).toLowerCase())) {
+      return { error: t("usernameTaken") };
+    }
     const member = {
-      ...data,
+      name: data.name || "",
+      email: data.email,
+      phone: data.phone || "",
+      username: data.username || "",
+      passHash: data.passHash || "",
+      photo: data.photo || "",
+      pets: [],
+      payment: { method: "cash", last4: "" },
+      reminders: true,
       id: crypto.randomUUID(),
       points: 20,
       visits: 0,
@@ -941,6 +1123,24 @@ const Members = {
     localStorage.setItem(KEYS.session, member.email);
     return { member };
   },
+  async register(data) {
+    const passHash = await sha256(data.password || "");
+    return this.signup({ ...data, passHash });
+  },
+  async login(id, password) {
+    const key = String(id || "").trim().toLowerCase();
+    const member = this.list().find(
+      (m) => m.email.toLowerCase() === key || String(m.username || "").toLowerCase() === key,
+    );
+    if (!member || !member.passHash) return { error: t("loginBad") };
+    const passHash = await sha256(password || "");
+    if (passHash !== member.passHash) return { error: t("loginBad") };
+    localStorage.setItem(KEYS.session, member.email);
+    return { member };
+  },
+  logout() {
+    localStorage.removeItem(KEYS.session);
+  },
   addPoints(email, points) {
     const list = this.list().map((m) =>
       m.email === email ? { ...m, points: m.points + points, visits: m.visits + 1 } : m,
@@ -948,6 +1148,8 @@ const Members = {
     this.save(list);
   },
 };
+
+const DOG_PAW_IMG = '<img src="images/dog-paw.png?v=2" alt="" />';
 
 const Bookings = {
   list() {
@@ -962,6 +1164,7 @@ const Bookings = {
       const s = serviceById(id);
       return sum + (s ? priceFor(s, region) : 0);
     }, 0);
+    const when = entry.date ? new Date(`${entry.date}T${entry.time || "09:00"}:00`) : null;
     const booking = {
       ...entry,
       serviceIds,
@@ -971,6 +1174,7 @@ const Bookings = {
       price,
       createdAt: new Date().toISOString(),
       status: "requested",
+      remindAt: when && !Number.isNaN(when.getTime()) ? new Date(when.getTime() - 24 * 60 * 60 * 1000).toISOString() : "",
     };
     bookings.unshift(booking);
     Store.set(KEYS.bookings, bookings);
@@ -1974,14 +2178,94 @@ function miaGo(action) {
     if (kind === "services" || kind === "fees") document.querySelector('[data-tab="services"]')?.click();
     if (kind === "calendar") document.querySelector('[data-tab="home"]')?.click();
   } else {
-    const map = { book: "#book", calendar: "#calendar", services: "#services", fees: "#services" };
-    document.querySelector(map[kind] || "")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    const here = window.location.pathname.split("/").pop() || "index.html";
+    const routes = {
+      book: "grooming-estimator-and-request.html",
+      calendar: "index.html#calendar",
+      services: "services.html#services",
+      fees: "services.html#services",
+    };
+    const target = routes[kind];
+    const local = document.querySelector({ book: "#book", calendar: "#calendar", services: "#services", fees: "#services" }[kind] || "");
+    if (local) local.scrollIntoView({ behavior: "smooth", block: "start" });
+    else if (target && !here.startsWith(target.split("#")[0])) window.location.href = target;
   }
   if (kind === "book") openBookModal({ serviceId });
   else if (serviceId) {
     const box = document.querySelector(`[name=serviceId][value="${serviceId}"], [name=addonId][value="${serviceId}"]`);
     if (box) box.checked = true;
   }
+}
+
+function publicHeaderHTML() {
+  const user = Members.session();
+  const accountHref = user ? "profile.html" : "account.html";
+  const accountKey = user ? "navProfile" : "navLogin";
+  const here = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
+  const mark = (href) => (here === href.split("#")[0] ? " nav-active" : "");
+  return `
+      <a class="brand logo-only" href="index.html">
+        <img src="images/logo.png?v=paw2" alt="Oh Wau, Patitas!" />
+        <span><em>Oh Wau, Patitas!</em><small>PET CENTER</small></span>
+      </a>
+      <nav data-site-nav>
+        <a class="${mark("index.html")}" href="index.html" data-i18n="navHome">${t("navHome")}</a>
+        <div class="nav-drop">
+          <a class="${mark("services.html")}" href="services.html" data-i18n="navServices">${t("navServices")}</a>
+          <div class="nav-menu">
+            <a href="services.html#grooming" data-i18n="offeringGrooming">${t("offeringGrooming")}</a>
+            <a href="services.html#daycare" data-i18n="offeringDaycare">${t("offeringDaycare")}</a>
+            <a href="services.html#sitting" data-i18n="offeringSitting">${t("offeringSitting")}</a>
+            <a href="services.html#boarding" data-i18n="offeringBoarding">${t("offeringBoarding")}</a>
+          </div>
+        </div>
+        <a class="${mark("about.html")}" href="about.html" data-i18n="navAbout">${t("navAbout")}</a>
+        <a href="index.html#testimonials" data-i18n="navTestimonials">${t("navTestimonials")}</a>
+        <a href="index.html#faq" data-i18n="navFaq">${t("navFaq")}</a>
+        <a class="${mark("grooming-estimator-and-request.html")}" href="grooming-estimator-and-request.html" data-i18n="navEstimate">${t("navEstimate")}</a>
+        <a class="${mark("profile.html")}${mark("account.html")}" href="${accountHref}" data-account-link data-i18n="${accountKey}">${t(accountKey)}</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-tabs" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+        <a class="phone-pill" href="tel:9549136161">(954) 913-6161</a>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>`;
+}
+
+function paintPublicHeader() {
+  const header = document.querySelector(".site-header");
+  const page = document.body.dataset.page;
+  if (!header || page === "office" || page === "admin") return;
+  header.innerHTML = publicHeaderHTML();
+}
+
+function bindSiteNav() {
+  const toggle = document.querySelector("[data-nav-toggle]");
+  const nav = document.querySelector("[data-site-nav]");
+  if (!toggle || !nav) return;
+  toggle.addEventListener("click", () => {
+    const open = document.body.classList.toggle("nav-open");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      document.body.classList.remove("nav-open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+  nav.querySelectorAll(".nav-drop").forEach((drop) => {
+    drop.addEventListener("mouseenter", () => drop.classList.add("open"));
+    drop.addEventListener("mouseleave", () => drop.classList.remove("open"));
+    drop.addEventListener("focusin", () => drop.classList.add("open"));
+    drop.addEventListener("focusout", (event) => {
+      if (!drop.contains(event.relatedTarget)) drop.classList.remove("open");
+    });
+  });
 }
 
 function miaFeeLines() {
@@ -2121,6 +2405,72 @@ function bindMiaAssist() {
   });
 }
 
+function bindMudTrail() {
+  document.querySelector(".paw-mud-trail")?.remove();
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const layer = document.createElement("div");
+  layer.className = "paw-mud-trail";
+  layer.setAttribute("aria-hidden", "true");
+  document.body.prepend(layer);
+  const step = 96;
+  const count = 64;
+  const spots = [];
+  const prints = [];
+  for (let i = 0; i < count; i += 1) {
+    const side = i % 2 ? 1 : -1;
+    const wander = Math.sin(i * 0.48) * 14;
+    const x = Math.max(8, Math.min(84, 12 + ((i * 4.4) % 52) + wander + side * 5));
+    const y = 80 + i * step;
+    const rot = -18 + side * 16;
+    spots.push({ x, y, rot });
+    const paw = document.createElement("span");
+    paw.className = "mud-paw";
+    paw.innerHTML = DOG_PAW_IMG;
+    paw.style.left = `${x}vw`;
+    paw.style.top = `${y}px`;
+    paw.style.setProperty("--rot", `${rot}deg`);
+    paw.style.setProperty("--size", `${4.1 + (i % 3) * 0.3}rem`);
+    layer.appendChild(paw);
+    prints.push(paw);
+  }
+  const walker = document.createElement("span");
+  walker.className = "mud-paw is-walker";
+  walker.innerHTML = DOG_PAW_IMG;
+  walker.style.setProperty("--size", "4.6rem");
+  layer.appendChild(walker);
+  let lastIndex = -1;
+  const pageBottom = () => {
+    const footer = document.querySelector(".site-footer");
+    return footer ? footer.offsetTop : document.body.clientHeight;
+  };
+  const paint = () => {
+    const maxIndex = spots.findIndex((spot) => spot.y > pageBottom() - 72);
+    const stop = maxIndex < 0 ? count - 1 : Math.max(0, maxIndex - 1);
+    const index = Math.max(0, Math.min(stop, Math.round(window.scrollY / step)));
+    if (index < lastIndex) return;
+    for (let i = Math.max(0, lastIndex); i <= index; i += 1) {
+      prints[i]?.classList.add("is-print");
+    }
+    if (index !== lastIndex) {
+      const spot = spots[index];
+      if (spot) {
+        walker.style.left = `${spot.x}vw`;
+        walker.style.top = `${spot.y}px`;
+        walker.style.setProperty("--rot", `${spot.rot}deg`);
+        walker.classList.remove("step");
+        void walker.offsetWidth;
+        walker.classList.add("step");
+      }
+      lastIndex = index;
+    }
+  };
+  paint();
+  window.addEventListener("scroll", paint, { passive: true });
+  window.addEventListener("resize", () => {
+    document.body.classList.remove("nav-open");
+  });
+}
+
 function playPawTrail() {
   document.querySelector(".paw-unveil")?.remove();
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -2141,8 +2491,7 @@ function playPawTrail() {
   const travel = 1.6;
   layer.style.setProperty("--unveil-delay", `${lastDelay}s`);
   layer.style.setProperty("--unveil-duration", `${travel}s`);
-  const svg =
-    '<svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="44" rx="13" ry="15" fill="currentColor"/><ellipse cx="13" cy="26" rx="7.5" ry="10" fill="currentColor" transform="rotate(-28 13 26)"/><ellipse cx="24" cy="14" rx="6.5" ry="9" fill="currentColor" transform="rotate(-8 24 14)"/><ellipse cx="40" cy="13" rx="6.5" ry="9" fill="currentColor" transform="rotate(8 40 13)"/><ellipse cx="51" cy="26" rx="7.5" ry="10" fill="currentColor" transform="rotate(28 51 26)"/></svg>';
+  const svg = DOG_PAW_IMG;
   const spot = (t, side) => ({
     x: `calc(${4 + t * 84}vw + ${side * 0.85}rem)`,
     y: `calc(${3 + t * 86}vh + ${side * 0.4}rem)`,
@@ -2168,7 +2517,8 @@ function playPawTrail() {
     }
     trail.appendChild(paw);
   }
-  layer.append(cover, trail);
+  cover.appendChild(trail);
+  layer.append(cover);
   document.body.appendChild(layer);
   document.body.classList.remove("paw-boot");
   window.setTimeout(() => {
@@ -2177,13 +2527,197 @@ function playPawTrail() {
   }, (lastDelay + travel + 0.3) * 1000);
 }
 
+function readImageFile(file) {
+  return new Promise((resolve) => {
+    if (!file) {
+      resolve("");
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result || ""));
+    reader.readAsDataURL(file);
+  });
+}
+
+function bindAuthForms() {
+  const login = document.querySelector("[data-login-form]");
+  const signup = document.querySelector("[data-register-form]");
+  login?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const data = Object.fromEntries(new FormData(login));
+    const result = await Members.login(data.id, data.password);
+    const note = login.querySelector("[data-auth-note]");
+    if (result.error) {
+      if (note) note.textContent = result.error;
+      return;
+    }
+    window.location.href = "profile.html";
+  });
+  signup?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const data = Object.fromEntries(new FormData(signup));
+    const photo = await readImageFile(signup.querySelector('[name="photo"]')?.files?.[0]);
+    const result = await Members.register({ ...data, photo });
+    const note = signup.querySelector("[data-auth-note]");
+    if (result.error) {
+      if (note) note.textContent = result.error;
+      return;
+    }
+    window.location.href = "profile.html";
+  });
+}
+
+function bindProfilePage() {
+  const member = Members.session();
+  if (!member) {
+    window.location.href = "account.html";
+    return;
+  }
+  const form = document.querySelector("[data-profile-form]");
+  const petForm = document.querySelector("[data-pet-form]");
+  const payForm = document.querySelector("[data-pay-form]");
+  const bookForm = document.querySelector("[data-pet-book-form]");
+  const petsRoot = document.querySelector("[data-pets]");
+  const booksRoot = document.querySelector("[data-my-bookings]");
+  const petSelect = bookForm?.querySelector('[name="petId"]');
+
+  const fill = () => {
+    if (!form) return;
+    form.name.value = member.name || "";
+    form.username.value = member.username || "";
+    form.email.value = member.email || "";
+    form.phone.value = member.phone || "";
+    const img = document.querySelector("[data-avatar]");
+    if (img) {
+      img.src = member.photo || "images/logo.png?v=paw2";
+      img.hidden = !member.photo;
+    }
+    if (payForm) {
+      payForm.querySelectorAll('[name="method"]').forEach((el) => {
+        el.checked = el.value === (member.payment?.method || "cash");
+      });
+      if (payForm.last4) payForm.last4.value = member.payment?.last4 || "";
+      if (payForm.reminders) payForm.reminders.checked = member.reminders !== false;
+    }
+    if (petsRoot) {
+      const pets = member.pets || [];
+      petsRoot.innerHTML = pets.length
+        ? pets
+            .map(
+              (p) => `<article class="pet-card">
+                ${p.photo ? `<img src="${p.photo}" alt="">` : ""}
+                <strong>${escapeHtml(p.name)}</strong>
+                <span>${escapeHtml(p.breed || "")} · ${escapeHtml(p.age || "")}</span>
+                <span>${p.birthday ? new Date(p.birthday + "T12:00:00").toLocaleDateString(localeTag()) : ""}</span>
+                <p>${escapeHtml(p.bio || "")}</p>
+              </article>`,
+            )
+            .join("")
+        : `<p class="empty">${t("noPetsYet")}</p>`;
+    }
+    if (petSelect) {
+      petSelect.innerHTML =
+        `<option value="">${t("choosePet")}</option>` +
+        (member.pets || []).map((p) => `<option value="${p.id}">${escapeHtml(p.name)}</option>`).join("");
+    }
+    if (booksRoot) {
+      const mine = Bookings.list().filter((b) => b.email === member.email);
+      booksRoot.innerHTML = mine.length
+        ? mine
+            .map((b) => {
+              const pet = (member.pets || []).find((p) => p.id === b.petId);
+              const label = b.offering ? t(b.offering) || b.offering : bookingNames(b);
+              return `<article class="booking"><strong>${escapeHtml(pet?.name || b.dogName || "")}</strong><span>${escapeHtml(label)}</span><span>${escapeHtml([b.date, b.time].filter(Boolean).join(" · "))}</span></article>`;
+            })
+            .join("")
+        : `<p class="empty">${t("noVisits")}</p>`;
+    }
+  };
+
+  fill();
+  form?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const data = Object.fromEntries(new FormData(form));
+    const photoFile = form.querySelector('[name="photo"]')?.files?.[0];
+    member.name = data.name;
+    member.username = data.username;
+    member.phone = data.phone;
+    if (photoFile) member.photo = await readImageFile(photoFile);
+    Members.put(member);
+    const note = form.querySelector("[data-profile-note]");
+    if (note) note.textContent = t("saved");
+    fill();
+  });
+  petForm?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const data = Object.fromEntries(new FormData(petForm));
+    const photo = await readImageFile(petForm.querySelector('[name="photo"]')?.files?.[0]);
+    member.pets = member.pets || [];
+    member.pets.push({
+      id: crypto.randomUUID(),
+      name: data.name,
+      breed: data.breed,
+      age: data.age,
+      birthday: data.birthday,
+      bio: data.bio,
+      photo,
+    });
+    Members.put(member);
+    petForm.reset();
+    fill();
+  });
+  payForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = Object.fromEntries(new FormData(payForm));
+    member.payment = { method: data.method || "cash", last4: String(data.last4 || "").replace(/\D/g, "").slice(-4) };
+    member.reminders = Boolean(data.reminders);
+    Members.put(member);
+    const note = payForm.querySelector("[data-pay-note]");
+    if (note) note.textContent = t("saved");
+  });
+  bookForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = Object.fromEntries(new FormData(bookForm));
+    const pet = (member.pets || []).find((p) => p.id === data.petId);
+    if (!pet) return;
+    Bookings.add({
+      ...data,
+      petId: pet.id,
+      dogName: pet.name,
+      ownerName: member.name,
+      email: member.email,
+      phone: member.phone,
+      offering: data.offering,
+      payMethod: member.payment?.method || "cash",
+      regionId: currentRegion().id,
+    });
+    const note = bookForm.querySelector("[data-book-note]");
+    if (note) {
+      note.textContent = member.reminders ? `${t("reminderSet")} ${member.email}.` : t("saved");
+    }
+    fill();
+    renderBookings(document.querySelector("[data-bookings]"));
+  });
+  document.querySelector("[data-logout]")?.addEventListener("click", () => {
+    Members.logout();
+    window.location.href = "account.html";
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   seed();
   const page = document.body.dataset.page;
   const publicPage = page !== "office" && page !== "admin";
-  if (publicPage) playPawTrail();
+  if (publicPage) {
+    paintPublicHeader();
+    playPawTrail();
+    bindMudTrail();
+  }
   if (publicPage && page !== "estimate") ensureBookModal();
+  bindSiteNav();
   bindLanguage();
+  if (page === "account") bindAuthForms();
+  if (page === "profile") bindProfilePage();
   bindBookingForm(document.querySelector("#book-form"), document.querySelector("[data-bookings]"));
   bindSignup(document.querySelector("#signup-form"));
   bindBirthdayForm(document.querySelector("#bday-form"));

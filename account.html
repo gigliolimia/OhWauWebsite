@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Log in · Oh Wau, Patitas!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Bitter:wght@700;800&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-page="account" class="paw-boot">
+    <header class="site-header"></header>
+    <main>
+      <section class="page-hero">
+        <h1 data-i18n="loginHero">Log in or create an account</h1>
+        <p data-i18n="needAccount">Create an account to save pets, pay, and book.</p>
+      </section>
+      <section class="section">
+        <div class="wrap auth-grid">
+          <form class="auth-card" data-login-form>
+            <h2 data-i18n="logIn">Log in</h2>
+            <label><span data-i18n="username">Username</span> <input name="id" required autocomplete="username" /></label>
+            <label><span data-i18n="password">Password</span> <input name="password" type="password" required autocomplete="current-password" /></label>
+            <button class="btn" type="submit" data-i18n="logIn">Log in</button>
+            <p class="account-note" data-auth-note></p>
+          </form>
+          <form class="auth-card" data-register-form>
+            <h2 data-i18n="createAccount">Create account</h2>
+            <label><span data-i18n="displayName">Your name</span> <input name="name" required /></label>
+            <label><span data-i18n="username">Username</span> <input name="username" required autocomplete="username" /></label>
+            <label><span data-i18n="email">Email</span> <input name="email" type="email" required /></label>
+            <label><span data-i18n="phone">Phone</span> <input name="phone" type="tel" /></label>
+            <label><span data-i18n="password">Password</span> <input name="password" type="password" required minlength="6" autocomplete="new-password" /></label>
+            <label><span data-i18n="profilePhoto">Profile photo</span> <input name="photo" type="file" accept="image/*" /></label>
+            <button class="btn" type="submit" data-i18n="createAccount">Create account</button>
+            <p class="account-note" data-auth-note></p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer stacked">
+      <div class="footer-inner">
+        <a class="footer-brand" href="index.html">
+          <img src="images/logo.png?v=paw2" alt="Oh Wau, Patitas!" />
+          <span>
+            <em>Oh Wau, Patitas!</em>
+            <small>PET CENTER · FLORIDA</small>
+          </span>
+        </a>
+        <div class="contact-tiles">
+          <a href="sms:9549136161"><strong data-i18n="callText">Call / text</strong><span>(954) 913-6161</span></a>
+          <a href="mailto:gmilallc1@gmail.com"><strong data-i18n="emailUs">Email</strong><span>gmilallc1@gmail.com</span></a>
+          <a href="https://wa.me/19549136161"><strong data-i18n="whatsapp">WhatsApp</strong><span data-i18n="messageUs">Message us</span></a>
+        </div>
+        <p class="hablamos" data-i18n="hablamos">Hablamos Español!</p>
+      </div>
+    </footer>
+    <script src="js/salon.js"></script>
+  </body>
+</html>

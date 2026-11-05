@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Allura&family=Outfit:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Bitter:wght@700;800&family=Source+Sans+3:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -15,19 +15,22 @@
   </head>
   <body data-page="site" class="paw-boot">
     <header class="site-header">
-      <a class="brand" href="index.html">
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+      <a class="brand logo-only" href="index.html">
         <img src="images/logo.png?v=paw2" alt="Oh Wau, Patitas!" />
         <span>
           <em>Oh Wau, Patitas!</em>
           <small>PET CENTER</small>
         </span>
       </a>
-      <nav>
+      <nav data-site-nav>
         <a class="nav-active" href="index.html" data-i18n="navHome">Home</a>
-        <a href="#services" data-i18n="navServices">Services</a>
-        <a href="#calendar" data-i18n="navCalendar">Calendar</a>
-        <a href="#reviews" data-i18n="navReviews">Reviews</a>
-        <a href="#faq" data-i18n="navFaq">FAQ</a>
+        <a href="services.html" data-i18n="navServices">Services</a>
+        <a href="about.html" data-i18n="navAbout">About Oh Wau</a>
+        <a href="index.html#testimonials" data-i18n="navTestimonials">Testimonials</a>
+        <a href="index.html#faq" data-i18n="navFaq">FAQ</a>
         <a href="grooming-estimator-and-request.html" data-i18n="navEstimate">Estimate</a>
       </nav>
       <div class="header-actions">
@@ -35,53 +38,90 @@
           <button type="button" data-lang="en" aria-pressed="true">EN</button>
           <button type="button" data-lang="es" aria-pressed="false">ES</button>
         </div>
-        <a class="btn" href="grooming-estimator-and-request.html" data-i18n="bookNow">Book now</a>
+        <a class="phone-pill" href="tel:9549136161">(954) 913-6161</a>
       </div>
     </header>
 
     <main>
-      <section class="wrap">
-        <div class="hero-banner">
-          <img class="hero-mark" src="images/logo.png?v=paw2" alt="" />
-          <div class="hero-bottom">
-            <div>
-              <h1 data-i18n="heroTitle">Gentle at-home grooming</h1>
-              <p data-i18n="heroSlogan">For all your grooming needs and furry friends necessities.</p>
-              <a class="btn" href="grooming-estimator-and-request.html" data-i18n="bookNow">Book now</a>
-            </div>
-            <p class="hero-proof" data-i18n="heroProof">At-home care · Florida</p>
+      <section class="kirey-hero">
+        <div class="hero-copy">
+          <h1 data-i18n="heroTitle">Gentle at-home grooming</h1>
+          <p class="lede" data-i18n="heroSlogan">For all your pets needs</p>
+          <div class="actions">
+            <a class="btn" href="grooming-estimator-and-request.html" data-i18n="bookNow">Book now</a>
+            <a class="btn ghost" href="services.html" data-i18n="learnMore">Learn more</a>
           </div>
         </div>
-        <div class="stats-row">
-          <article class="stat-card stat-home">
-            <img class="mia-mascot" src="images/mia-open.png" data-mia-wink alt="Mia" />
+        <img class="hero-logo" src="images/logo.png?v=paw2" alt="Oh Wau, Patitas!" />
+      </section>
+
+      <section class="section" id="need">
+        <div class="wrap need-grid">
+          <div>
+            <h2 data-i18n="needTitle">Everything you need, all in one place</h2>
+            <p class="need-lead" data-i18n="needLead">Mobile grooming, pet day care, pet sitting, and pet boarding.</p>
+          </div>
+          <a class="need-item" href="services.html#grooming">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#ffb020" stroke-width="2.4">
+                <path d="M8 30h24l6-10H20" />
+                <rect x="8" y="20" width="16" height="10" rx="2" />
+                <circle cx="16" cy="34" r="3.2" />
+                <circle cx="30" cy="34" r="3.2" />
+              </svg>
+            </span>
             <div>
-              <strong data-i18n="statHome">At home</strong>
-              <span data-i18n="statHomeNote">We come to you</span>
+              <h3 data-i18n="offeringGrooming">Mobile grooming</h3>
+              <p data-i18n="offeringGroomingNote">We come to you</p>
             </div>
-          </article>
-          <article class="stat-card stacked">
-            <strong data-i18n="statOff">$10 off</strong>
-            <span data-i18n="statOffNote">Your first visit</span>
-          </article>
-          <article class="stat-card stacked">
-            <strong data-i18n="statEs">Español</strong>
-            <span data-i18n="statEsNote">We speak Spanish</span>
-          </article>
+          </a>
+          <a class="need-item" href="services.html#daycare">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#c4b5fd" stroke-width="2.4">
+                <path d="M8 22 24 9l16 13v16a3 3 0 0 1-3 3H11a3 3 0 0 1-3-3V22z" />
+                <path d="M20 41V27h8v14" />
+              </svg>
+            </span>
+            <div>
+              <h3 data-i18n="offeringDaycare">Pet day care</h3>
+              <p data-i18n="offeringDaycareNote">Daytime care in a calm space</p>
+            </div>
+          </a>
+          <a class="need-item" href="services.html#sitting">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#9ef0d8" stroke-width="2.4">
+                <circle cx="18" cy="18" r="6" />
+                <circle cx="32" cy="16" r="7" />
+                <path d="M8 40c2-8 8-12 16-12s14 4 16 12" />
+              </svg>
+            </span>
+            <div>
+              <h3 data-i18n="offeringSitting">Pet sitting</h3>
+              <p data-i18n="offeringSittingNote">Care at home while you’re away</p>
+            </div>
+          </a>
+          <a class="need-item" href="services.html#boarding">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#67e8f9" stroke-width="2.4">
+                <rect x="10" y="16" width="28" height="22" rx="3" />
+                <path d="M10 24h28M18 16v-4h12v4" />
+              </svg>
+            </span>
+            <div>
+              <h3 data-i18n="offeringBoarding">Pet boarding</h3>
+              <p data-i18n="offeringBoardingNote">Overnight stays with gentle care</p>
+            </div>
+          </a>
         </div>
       </section>
 
-      <section class="section" id="services">
-        <div class="wrap">
-          <p class="kicker" data-i18n="groomingKicker">Grooming</p>
-          <h2 data-i18n="groomingTitle">Grooming services</h2>
-          <p class="center-note"><span data-i18n="pricesFor">Prices for</span> <span data-region-label>your area</span>.</p>
-          <div data-service-tabs></div>
-          <p class="haircut-note" data-i18n="haircutNote">If a short-hair breed requires a haircut, long-hair pricing will apply.</p>
-        </div>
+      <section class="sun-banner">
+        <h2 data-i18n="bannerTitle">Gentle at-home grooming in St. Lucie County</h2>
+        <p data-i18n="bannerLead">Our professional team provides exceptional grooming service.</p>
+        <a class="btn ghost" href="services.html" data-i18n="learnMore">Learn more</a>
       </section>
 
-      <section class="section mist" id="how">
+      <section class="section" id="how">
         <div class="wrap">
           <p class="kicker" data-i18n="howKicker">How we work</p>
           <h2 data-i18n="howTitle">A calm visit, start to finish</h2>
@@ -105,7 +145,57 @@
         </div>
       </section>
 
-      <section class="section" id="birthdays">
+      <section class="section mist" id="why">
+        <div class="wrap">
+          <p class="kicker" data-i18n="whyKicker">Why us</p>
+          <h2 data-i18n="whyTitle">Why dog owners choose Oh Wau</h2>
+          <div class="why-grid">
+            <article class="why-card">
+              <svg class="mark" viewBox="0 0 48 48" fill="currentColor" aria-hidden="true">
+                <ellipse cx="24" cy="32" rx="10" ry="11"/>
+                <ellipse cx="10" cy="18" rx="6" ry="8"/>
+                <ellipse cx="19" cy="10" rx="5" ry="7"/>
+                <ellipse cx="29" cy="10" rx="5" ry="7"/>
+                <ellipse cx="38" cy="18" rx="6" ry="8"/>
+              </svg>
+              <h3 data-i18n="why1Title">We come to you</h3>
+              <p data-i18n="why1Body">Grooming happens in your space — less stress, no salon wait.</p>
+            </article>
+            <article class="why-card">
+              <svg class="mark" viewBox="0 0 48 48" fill="currentColor" aria-hidden="true">
+                <path d="M24 42s-14-8.6-14-18a8 8 0 0 1 14-5 8 8 0 0 1 14 5c0 9.4-14 18-14 18z"/>
+              </svg>
+              <h3 data-i18n="why2Title">Less stress on you and your pet</h3>
+              <p data-i18n="why2Body">Home visits are often calmer. Tell us about temperament and we’ll go gently.</p>
+            </article>
+            <article class="why-card">
+              <svg class="mark" viewBox="0 0 48 48" fill="currentColor" aria-hidden="true">
+                <circle cx="24" cy="16" r="8"/>
+                <path d="M10 38c1.5-8 7-12 14-12s12.5 4 14 12"/>
+              </svg>
+              <h3 data-i18n="why3Title">One pup, full attention</h3>
+              <p data-i18n="why3Body">Bath &amp; Blow-Out, breed-specific haircuts, and add-ons picked for your dog.</p>
+            </article>
+            <article class="why-card">
+              <svg class="mark" viewBox="0 0 48 48" fill="currentColor" aria-hidden="true">
+                <path d="M8 34V16l16-8 16 8v18l-16 8-16-8z"/>
+              </svg>
+              <h3 data-i18n="why4Title">St. Lucie and nearby</h3>
+              <p data-i18n="why4Body">We speak Spanish, and we’re at home in St. Lucie County and nearby.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="testimonials">
+        <div class="wrap">
+          <p class="kicker" data-i18n="reviewsKicker">Testimonials</p>
+          <h2 data-i18n="reviewsTitle">Google &amp; Yelp</h2>
+          <div class="card-row" data-reviews></div>
+        </div>
+      </section>
+
+      <section class="section mist" id="birthdays">
         <div class="wrap book-grid">
           <div>
             <p class="kicker" data-i18n="bdayKicker">This month</p>
@@ -125,7 +215,7 @@
         </div>
       </section>
 
-      <section class="section mist" id="calendar">
+      <section class="section" id="calendar">
         <div class="wrap">
           <p class="kicker" data-i18n="calKicker">Calendar</p>
           <h2><span data-month-name>This month</span> <span data-i18n="calSuffix">activity &amp; food</span></h2>
@@ -139,19 +229,11 @@
         </div>
       </section>
 
-      <section class="section" id="shop">
+      <section class="section mist" id="shop">
         <div class="wrap">
           <p class="kicker" data-i18n="shopKicker">Seasonal</p>
           <h2 data-i18n="shopTitle">Holiday accessories &amp; foods</h2>
           <div class="shop-grid" data-shop></div>
-        </div>
-      </section>
-
-      <section class="section mist" id="reviews">
-        <div class="wrap">
-          <p class="kicker" data-i18n="reviewsKicker">Testimonials</p>
-          <h2 data-i18n="reviewsTitle">Google &amp; Yelp</h2>
-          <div class="card-row" data-reviews></div>
         </div>
       </section>
 
@@ -203,15 +285,30 @@
           <div class="booking-list" data-bookings></div>
         </div>
       </section>
+
+      <section class="area-band">
+        <h2 data-i18n="areaTitle">Service area</h2>
+        <p data-i18n="areaBody">St. Lucie County · Martin County · Indian River County · nearby</p>
+      </section>
     </main>
 
     <footer class="site-footer stacked">
-      <div class="contact-tiles">
-        <a href="sms:9549136161"><strong data-i18n="callText">Call / text</strong><span>(954) 913-6161</span></a>
-        <a href="mailto:gmilallc1@gmail.com"><strong data-i18n="emailUs">Email</strong><span>gmilallc1@gmail.com</span></a>
-        <a href="https://wa.me/19549136161"><strong data-i18n="whatsapp">WhatsApp</strong><span data-i18n="messageUs">Message us</span></a>
+      <div class="footer-inner">
+        <a class="footer-brand" href="index.html">
+          <img src="images/logo.png?v=paw2" alt="Oh Wau, Patitas!" />
+          <span>
+            <em>Oh Wau, Patitas!</em>
+            <small>PET CENTER · FLORIDA</small>
+          </span>
+        </a>
+        <div class="contact-tiles">
+          <a href="sms:9549136161"><strong data-i18n="callText">Call / text</strong><span>(954) 913-6161</span></a>
+          <a href="mailto:gmilallc1@gmail.com"><strong data-i18n="emailUs">Email</strong><span>gmilallc1@gmail.com</span></a>
+          <a href="https://wa.me/19549136161"><strong data-i18n="whatsapp">WhatsApp</strong><span data-i18n="messageUs">Message us</span></a>
+        </div>
+        <p class="hablamos" data-i18n="hablamos">Hablamos Español!</p>
+        <p class="footer-meta"><span data-i18n="footerNote">Oh Wau, Patitas! · Pet Center · Florida ·</span> <a href="app.html" data-i18n="appLink">App</a> · <a href="office.html" data-i18n="officeLink">Office</a> · <a href="admin.html" data-i18n="adminLink">Admin</a></p>
       </div>
-      <p><span data-i18n="footerNote">Oh Wau, Patitas! · Pet Center · Florida ·</span> <a href="app.html" data-i18n="appLink">App</a> · <a href="office.html" data-i18n="officeLink">Office</a> · <a href="admin.html" data-i18n="adminLink">Admin</a></p>
     </footer>
 
     <aside class="mia-assist" data-mia-assist>
