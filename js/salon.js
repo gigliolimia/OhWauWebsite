@@ -24,6 +24,8 @@ const I18N = {
     navAbout: "About Oh Wau",
     navFaq: "FAQ",
     navEstimate: "Estimate",
+    navShop: "Accessories & Treats",
+    navContact: "Contact Us",
     navLogin: "Log in",
     navProfile: "Profile",
     offeringGrooming: "Mobile grooming",
@@ -217,7 +219,7 @@ const I18N = {
     miaBookHelp: "I opened booking. Pick a service, add-ons, a time, and check the disclosure.",
     miaServicePicked: "I checked that service on the form. Add your details and send.",
     miaHome: "Yes — we come to you in St. Lucie County and nearby.",
-    miaContact: "Text or WhatsApp (954) 913-6161, or email gmilallc1@gmail.com.",
+    miaContact: "Text or WhatsApp (772) 775-5227, or email ohwaupatitas@hotmail.com.",
     miaClub: "Club: 20 points to join, 10 per booking, 100 points = $10 off.",
     miaFallback: "I can help with fees, calendar, or booking. Try a button below.",
     miaDuration: "Visit times are estimates at home.",
@@ -298,6 +300,8 @@ const I18N = {
     navAbout: "Sobre Oh Wau",
     navFaq: "Preguntas",
     navEstimate: "Cotizar",
+    navShop: "Accesorios y premios",
+    navContact: "Contáctanos",
     navLogin: "Entrar",
     navProfile: "Perfil",
     offeringGrooming: "Grooming móvil",
@@ -491,7 +495,7 @@ const I18N = {
     miaBookHelp: "Abrí la reserva. Elige servicio, extras, hora, y marca la divulgación.",
     miaServicePicked: "Marqué ese servicio en el formulario. Completa y envía.",
     miaHome: "Sí — vamos a tu casa en el condado de St. Lucie y cerca.",
-    miaContact: "Texto o WhatsApp (954) 913-6161, o correo gmilallc1@gmail.com.",
+    miaContact: "Texto o WhatsApp (772) 775-5227, o correo ohwaupatitas@hotmail.com.",
     miaClub: "Club: 20 puntos al unirte, 10 por reserva, 100 puntos = $10 de descuento.",
     miaFallback: "Puedo ayudar con precios, calendario o reservas. Prueba un botón.",
     miaDuration: "Los tiempos son estimados en casa.",
@@ -621,10 +625,10 @@ function bindLanguage() {
 
 const Salon = {
   name: "Oh Wau, Patitas!",
-  phone: "954-913-6161",
-  phoneTel: "9549136161",
-  email: "gmilallc1@gmail.com",
-  whatsapp: "https://wa.me/19549136161",
+  phone: "772-775-5227",
+  phoneTel: "7727755227",
+  email: "ohwaupatitas@hotmail.com",
+  whatsapp: "https://wa.me/17727755227",
   services: [
     {
       id: "bath",
@@ -2205,7 +2209,7 @@ function publicHeaderHTML() {
   const mark = (href) => (here === href.split("#")[0] ? " nav-active" : "");
   return `
       <a class="brand logo-only" href="index.html">
-        <img src="images/logo.png?v=paw2" alt="Oh Wau, Patitas!" />
+        <img src="images/logo.png?v=paw4" alt="Oh Wau, Patitas!" />
         <span><em>Oh Wau, Patitas!</em><small>PET CENTER</small></span>
       </a>
       <nav data-site-nav>
@@ -2220,17 +2224,23 @@ function publicHeaderHTML() {
           </div>
         </div>
         <a class="${mark("about.html")}" href="about.html" data-i18n="navAbout">${t("navAbout")}</a>
-        <a href="index.html#testimonials" data-i18n="navTestimonials">${t("navTestimonials")}</a>
+        <a class="${mark("accessories.html")}" href="accessories.html" data-i18n="navShop">${t("navShop")}</a>
         <a href="index.html#faq" data-i18n="navFaq">${t("navFaq")}</a>
-        <a class="${mark("grooming-estimator-and-request.html")}" href="grooming-estimator-and-request.html" data-i18n="navEstimate">${t("navEstimate")}</a>
-        <a class="${mark("profile.html")}${mark("account.html")}" href="${accountHref}" data-account-link data-i18n="${accountKey}">${t(accountKey)}</a>
       </nav>
       <div class="header-actions">
-        <div class="lang-tabs" role="group" aria-label="Language">
-          <button type="button" data-lang="en" aria-pressed="true">EN</button>
-          <button type="button" data-lang="es" aria-pressed="false">ES</button>
+        <div class="lang-wrap" data-lang-wrap>
+          <img class="lang-dog" src="images/poodle.png?v=1" alt="" data-lang-dog />
+          <div class="lang-tabs" role="group" aria-label="Language">
+            <button type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-lang="es" aria-pressed="false">ES</button>
+          </div>
+          <div class="lang-bubble" role="note">
+            To change languages, use this button
+            <span>Para cambiar de idioma, usa este botón</span>
+          </div>
         </div>
-        <a class="phone-pill" href="tel:9549136161">(954) 913-6161</a>
+        <a class="phone-pill" href="#contact" data-i18n="navContact">Contact Us</a>
+        <a class="login-pill" href="${accountHref}" data-account-link data-i18n="${accountKey}">${t(accountKey)}</a>
       </div>
       <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" data-nav-toggle>
         <span></span><span></span><span></span>
@@ -2244,7 +2254,36 @@ function paintPublicHeader() {
   header.innerHTML = publicHeaderHTML();
 }
 
+function bindLangDog() {
+  const wrap = document.querySelector("[data-lang-wrap]");
+  if (!wrap) return;
+  const dog = wrap.querySelector("[data-lang-dog]");
+  // Show the tip when the page opens, then hide it after a few seconds
+  setTimeout(() => wrap.classList.add("tip-on"), 600);
+  setTimeout(() => wrap.classList.remove("tip-on"), 9000);
+  const hop = () => {
+    if (!dog.animate) return;
+    dog.animate(
+      [
+        { transform: "translateY(0) scaleY(1)" },
+        { transform: "translateY(2px) scaleY(0.88)", offset: 0.2 },
+        { transform: "translateY(-20px) rotate(-6deg)", offset: 0.5 },
+        { transform: "translateY(0) scaleY(0.94)", offset: 0.8 },
+        { transform: "translateY(0) scaleY(1)" },
+      ],
+      { duration: 650, easing: "ease-out", iterations: 2 }
+    );
+  };
+  setTimeout(hop, 700);
+  setInterval(hop, 3500);
+  dog.addEventListener("mouseenter", () => { hop(); wrap.classList.add("tip-on"); });
+  dog.addEventListener("mouseleave", () => wrap.classList.remove("tip-on"));
+  dog.addEventListener("click", () => { hop(); wrap.classList.toggle("tip-on"); });
+  wrap.querySelectorAll("[data-lang]").forEach((b) => b.addEventListener("click", () => wrap.classList.remove("tip-on")));
+}
+
 function bindSiteNav() {
+  bindLangDog();
   const toggle = document.querySelector("[data-nav-toggle]");
   const nav = document.querySelector("[data-site-nav]");
   if (!toggle || !nav) return;
@@ -2589,7 +2628,7 @@ function bindProfilePage() {
     form.phone.value = member.phone || "";
     const img = document.querySelector("[data-avatar]");
     if (img) {
-      img.src = member.photo || "images/logo.png?v=paw2";
+      img.src = member.photo || "images/logo.png?v=paw4";
       img.hidden = !member.photo;
     }
     if (payForm) {

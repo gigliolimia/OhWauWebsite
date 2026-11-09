@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Accessories &amp; Treats · Oh Wau, Patitas!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Bitter:wght@700;800&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-page="site" class="paw-boot">
+    <header class="site-header">
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+      <a class="brand logo-only" href="index.html">
+        <img src="images/logo.png?v=paw4" alt="Oh Wau, Patitas!" />
+        <span>
+          <em>Oh Wau, Patitas!</em>
+          <small>PET CENTER</small>
+        </span>
+      </a>
+      <nav data-site-nav>
+        <a href="index.html" data-i18n="navHome">Home</a>
+        <a href="services.html" data-i18n="navServices">Services</a>
+        <a class="nav-active" href="about.html" data-i18n="navAbout">About Oh Wau</a>
+        <a href="accessories.html" data-i18n="navShop">Accessories &amp; Treats</a>
+        <a href="index.html#faq" data-i18n="navFaq">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-tabs" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+        <a class="phone-pill" href="#contact" data-i18n="navContact">Contact Us</a>
+        <a class="login-pill" href="account.html" data-account-link data-i18n="navLogin">Log in</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <h1>Accessories &amp; Treats</h1>
+        <p>Coming soon! Collars, toys, and tasty treats for your pet.</p>
+        <p><a class="btn" href="tel:7727755227">Call us to ask</a></p>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer stacked">
+      <div class="footer-inner">
+        <a class="footer-brand" href="index.html">
+          <img src="images/logo.png?v=paw4" alt="Oh Wau, Patitas!" />
+          <span>
+            <em>Oh Wau, Patitas!</em>
+            <small>PET CENTER · FLORIDA</small>
+          </span>
+        </a>
+        <div class="contact-tiles">
+          <a href="sms:7727755227"><strong data-i18n="callText">Call / text</strong><span>(772) 775-5227</span></a>
+          <a href="mailto:ohwaupatitas@hotmail.com"><strong data-i18n="emailUs">Email</strong><span>ohwaupatitas@hotmail.com</span></a>
+          <a href="https://wa.me/17727755227"><strong data-i18n="whatsapp">WhatsApp</strong><span data-i18n="messageUs">Message us</span></a>
+        </div>
+        <p class="hablamos" data-i18n="hablamos">Hablamos Español!</p>
+        <p class="footer-meta"><span data-i18n="footerNote">Oh Wau, Patitas! · Pet Center · Florida ·</span> <a href="app.html" data-i18n="appLink">App</a> · <a href="office.html" data-i18n="officeLink">Office</a> · <a href="admin.html" data-i18n="adminLink">Admin</a></p>
+      </div>
+    </footer>
+
+    <aside class="mia-assist" data-mia-assist>
+      <div class="mia-panel" hidden data-mia-panel>
+        <header class="mia-head">
+          <img class="mia-mascot" src="images/mia-open.png" data-mia-wink alt="" />
+          <div>
+            <strong data-i18n="miaName">Mia</strong>
+            <span data-i18n="miaRole">Your helper</span>
+          </div>
+          <button type="button" class="mia-x" data-mia-close aria-label="Close">×</button>
+        </header>
+        <div class="mia-chips">
+          <button type="button" data-mia-chip="fees" data-i18n="miaChipFees">Fees</button>
+          <button type="button" data-mia-chip="calendar" data-i18n="miaChipCal">Calendar</button>
+          <button type="button" data-mia-chip="services" data-i18n="miaChipServices">Services</button>
+          <button type="button" data-mia-chip="book" data-i18n="miaChipBook">Book</button>
+        </div>
+        <div class="mia-log" data-mia-log></div>
+        <form class="mia-form" data-mia-form>
+          <input name="q" data-mia-input data-i18n-placeholder="miaInput" placeholder="Ask about fees, calendar, or booking" autocomplete="off" />
+          <button class="btn" type="submit" data-i18n="miaSend">Send</button>
+        </form>
+      </div>
+      <button class="mia-fab" type="button" data-mia-toggle>
+        <img class="mia-mascot" src="images/mia-open.png" data-mia-wink alt="" />
+        <span data-i18n="miaAsk">Ask Mia</span>
+      </button>
+    </aside>
+
+    <script src="js/salon.js"></script>
+  </body>
+</html>
