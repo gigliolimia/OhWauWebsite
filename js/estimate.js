@@ -12,6 +12,11 @@
       const DROP_OFF_NOTE_EN = "Drop-off address is confirmed when we reply.";
       const DROP_OFF_NOTE_ES = "Confirmamos la dirección de entrega cuando contestemos.";
 
+      // Promo codes: code → percent off the visit. First-groom code is for new clients only.
+      const PROMO_CODES = {
+        WELCOME10: 10,
+      };
+
       const PRICES = {
         bath: { xs: 45, s: 55, m: 70, l: 85, xl: 100 },
         haircut: { xs: 65, s: 75, m: 95, l: 115, xl: 140 },
@@ -107,6 +112,10 @@
           mobile: "We come to you",
           dropoff: "Drop-off",
           summaryMobile: "VISIT · SIZE · SERVICE",
+          promo: "Promo code",
+          promoPh: "e.g. WELCOME10",
+          promoOk: "WELCOME10: 10% off your first groom (−$AMT). For new clients.",
+          promoBad: "That code isn’t valid. Check the spelling and try again.",
         },
         es: {
           kicker: "Estimado de grooming",
@@ -157,6 +166,10 @@
           noUrl: "El enlace de solicitudes aún no está conectado. Escribe al (772) 775-5227, o espera a que se pegue REQUEST_URL.",
           mobile: "Vamos a ti",
           dropoff: "Entrega",
+          promo: "Código de descuento",
+          promoPh: "ej. WELCOME10",
+          promoOk: "WELCOME10: 10% de descuento en tu primer grooming (−$AMT). Para clientes nuevos.",
+          promoBad: "Ese código no es válido. Revisa cómo lo escribiste e intenta de nuevo.",
         },
       };
 
@@ -208,6 +221,22 @@
         return [...form.querySelectorAll("[name=addon]:checked")].map((el) => el.value);
       }
 
+      function promoInput() {
+        const el = field("promo");
+        return el ? el.value.trim().toUpperCase() : "";
+      }
+
+      function showPromoNote(quote) {
+        const note = document.querySelector("[data-promo-note]");
+        if (!note) return;
+        const p = pack();
+        const typed = promoInput();
+        if (!typed) note.textContent = "";
+        else if (quote?.promoCode) note.textContent = p.promoOk.replace("AMT", String(quote.promoOff));
+        else if (PROMO_CODES[typed]) note.textContent = "";
+        else note.textContent = p.promoBad;
+      }
+
       function estimate() {
         const size = field("pupSize").value;
         const service = field("service").value;
@@ -217,7 +246,11 @@
         const addons = selectedAddons().reduce((sum, id) => sum + (ADDON_PRICES[id] || 0), 0);
         const travel = visitType === "mobile" ? MOBILE_TRAVEL_FEE : 0;
         const drop = visitType === "dropoff" ? DROP_OFF_DISCOUNT : 0;
-        const subtotal = Math.max(0, base + addons + travel - drop);
+        const beforePromo = Math.max(0, base + addons + travel - drop);
+        const promoCode = promoInput();
+        const promoPct = PROMO_CODES[promoCode] || 0;
+        const promoOff = Math.round((beforePromo * promoPct) / 100);
+        const subtotal = beforePromo - promoOff;
         const fee = Math.round(subtotal * CARD_FEE_RATE);
         return {
           size,
@@ -228,6 +261,8 @@
           addonsTotal: addons,
           travel,
           drop,
+          promoCode: promoPct ? promoCode : "",
+          promoOff,
           card: subtotal,
           cash: Math.max(0, subtotal - fee),
           fee,
@@ -237,6 +272,7 @@
       function updateQuote() {
         const p = pack();
         const quote = estimate();
+        showPromoNote(quote);
         const dropNote = document.querySelector("[data-drop-note]");
         dropNote.textContent = field("visitType").value === "dropoff" ? (lang() === "es" ? DROP_OFF_NOTE_ES : DROP_OFF_NOTE_EN) : "";
         const hair = document.querySelector("[data-haircut-note]");
@@ -279,6 +315,8 @@
         const date = q.get("date");
         const time = q.get("time");
         const visit = q.get("visit");
+        const code = q.get("code");
+        if (code && field("promo")) field("promo").value = code.toUpperCase();
         if (breed && field("breed")?.querySelector(`[value="${breed}"]`)) field("breed").value = breed;
         if (size && field("pupSize")?.querySelector(`[value="${size}"]`)) field("pupSize").value = size;
         if (service && field("service")?.querySelector(`[value="${service}"]`)) field("service").value = service;
@@ -339,7 +377,12 @@
           regionId: field("regionId").value,
           date: field("date").value,
           time: field("time").value,
-          notes: field("notes").value.trim(),
+          promoCode: quote.promoCode,
+          promoDiscount: quote.promoOff,
+          // The sheet has fixed columns, so the code also rides along in Notes.
+          notes: [quote.promoCode ? `PROMO ${quote.promoCode} (−$${quote.promoOff})` : "", field("notes").value.trim()]
+            .filter(Boolean)
+            .join(" · "),
           createdAt: new Date().toISOString(),
         };
         try {
